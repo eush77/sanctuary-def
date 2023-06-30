@@ -607,6 +607,14 @@
     (function(array2) { return [array2[0]]; })
     (function(array2) { return [array2[1]]; });
 
+  //# BigInt :: Type
+  //.
+  //. Type comprising every BigInt value.
+  const BigInt_ = NullaryTypeWithUrl
+    ('BigInt')
+    ([])
+    (typeofEq ('bigint'));
+
   //# Boolean :: Type
   //.
   //. Type comprising `true` and `false`.
@@ -1065,6 +1073,7 @@
   //.   - <code>[Arguments](#Arguments)</code>
   //.   - <code>[Array](#Array) ([Unknown][])</code>
   //.   - <code>[Array2](#Array2) ([Unknown][]) ([Unknown][])</code>
+  //.   - <code>[BigInt](#BigInt)</code>
   //.   - <code>[Boolean](#Boolean)</code>
   //.   - <code>[Buffer](#Buffer)</code>
   //.   - <code>[Date](#Date)</code>
@@ -1094,6 +1103,7 @@
     Arguments,
     Array_ (Unknown),
     Array2 (Unknown) (Unknown),
+    BigInt_,
     Boolean_,
     Buffer_,
     Date_,
@@ -2836,6 +2846,7 @@
     Array0: Array0,
     Array1: fromUncheckedUnaryType (Array1),
     Array2: fromUncheckedBinaryType (Array2),
+    BigInt: BigInt_,
     Boolean: Boolean_,
     Buffer: Buffer_,
     Date: Date_,
